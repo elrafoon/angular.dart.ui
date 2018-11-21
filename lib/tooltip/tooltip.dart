@@ -362,8 +362,8 @@ abstract class TooltipBase implements ScopeAware {
     int ttWidth, ttHeight;
     Map ttPosition;
     // Get the position of the directive element.
-    //position = appendToBody ? _position.offset(_element) : _position.position(_element);
-    dom.Rectangle position = appendToBody ? _element.offset : _element.offset;
+    dynamic position = appendToBody ? _position.offset(_element) : _position.position(_element);
+    //dom.Rectangle position = appendToBody ? _element.offset : _element.offset;
 
     // Get the height and width of the tooltip so we can center it.
     ttWidth = tooltip.offsetWidth;
